@@ -6,7 +6,7 @@ TQAutoLayout is a UIView Category. use it help you create NSLayoutConstraint obj
 
 do constraints to view
 
-```
+```objc
     [NSLayoutConstraint activateConstraints:@[[NSLayoutConstraint constraintWithItem:view
                                                                            attribute:NSLayoutAttributeLeft
                                                                            relatedBy:NSLayoutRelationEqual
@@ -40,7 +40,7 @@ do constraints to view
 ##Now
 just . . . .
 
-```
+```objc
     [NSLayoutConstraint activateConstraints:@[[view.tq_left equal:self.view.tq_left],
                                               [view.tq_right equal:self.view.tq_right],
                                               [view.tq_top equal:self.view.tq_top],
