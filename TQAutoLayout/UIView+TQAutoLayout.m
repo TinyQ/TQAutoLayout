@@ -421,13 +421,15 @@ static char kTQNotAnAttributeKey;
 }
 
 - (NSLayoutConstraint *)equal:(TQRelate*)relate multiplier:(CGFloat)multiplier constant:(CGFloat)c{
-    return [NSLayoutConstraint constraintWithItem:self.item
-                                        attribute:self.attribute
-                                        relatedBy:NSLayoutRelationEqual
-                                           toItem:relate.item
-                                        attribute:relate.attribute
-                                       multiplier:multiplier
-                                         constant:c];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.item
+                                                                  attribute:self.attribute
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:relate.item
+                                                                  attribute:relate.attribute
+                                                                 multiplier:multiplier
+                                                                   constant:c];
+    self.constraint = constraint;
+    return constraint;
 }
 
 - (NSLayoutConstraint *)lessThanOrEqual:(TQRelate*)relate{
@@ -439,13 +441,15 @@ static char kTQNotAnAttributeKey;
 }
 
 - (NSLayoutConstraint *)lessThanOrEqual:(TQRelate*)relate multiplier:(CGFloat)multiplier constant:(CGFloat)c{
-    return [NSLayoutConstraint constraintWithItem:self.item
-                                        attribute:self.attribute
-                                        relatedBy:NSLayoutRelationLessThanOrEqual
-                                           toItem:relate.item
-                                        attribute:relate.attribute
-                                       multiplier:multiplier
-                                         constant:c];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.item
+                                                                  attribute:self.attribute
+                                                                  relatedBy:NSLayoutRelationLessThanOrEqual
+                                                                     toItem:relate.item
+                                                                  attribute:relate.attribute
+                                                                 multiplier:multiplier
+                                                                   constant:c];
+    self.constraint = constraint;
+    return constraint;
 }
 
 - (NSLayoutConstraint *)greaterThanOrEqual:(TQRelate*)relate{
@@ -457,13 +461,15 @@ static char kTQNotAnAttributeKey;
 }
 
 - (NSLayoutConstraint *)greaterThanOrEqual:(TQRelate*)relate multiplier:(CGFloat)multiplier constant:(CGFloat)c{
-    return [NSLayoutConstraint constraintWithItem:self.item
-                                        attribute:self.attribute
-                                        relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                           toItem:relate.item
-                                        attribute:relate.attribute
-                                       multiplier:multiplier
-                                         constant:c];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.item
+                                                                  attribute:self.attribute
+                                                                  relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                                     toItem:relate.item
+                                                                  attribute:relate.attribute
+                                                                 multiplier:multiplier
+                                                                   constant:c];
+    self.constraint = constraint;
+    return constraint;
 }
 
 @end

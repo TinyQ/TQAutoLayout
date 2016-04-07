@@ -40,6 +40,7 @@
 
 @property (nonatomic,weak) UIView *item;
 @property (nonatomic,assign) NSLayoutAttribute attribute;
+@property (nonatomic,strong) NSLayoutConstraint *constraint;
 
 - (NSLayoutConstraint *)equal:(TQRelate*)relate;
 - (NSLayoutConstraint *)equal:(TQRelate*)relate constant:(CGFloat)c;
